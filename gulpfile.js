@@ -146,10 +146,9 @@ gulp.task('compile-fonts', function (done) {
 gulp.task('compile-all', function (done) {
 	runSequence(
 		'images',
-		'gen-fonts',
-		'process-css',
-		'add-prefixes',
-		'compress-css',
+		'compile-css',
+		'compile-js',
+		'compile-fonts',
 	done);
 });
 
