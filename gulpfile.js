@@ -105,7 +105,7 @@ gulp.task('concat-js', function() {
 //COMPRESS JS
 gulp.task('compress-js', function (cb) {
   pump([
-		gulp.src(['!./src/main/webapp/resources/src/js/**/*__*.js',sourceDir+'/js/**/*.js',distDir+'/js/main.js']),
+		gulp.src(['!./src/main/webapp/resources/src/js/**/*__concat.js',sourceDir+'/js/**/*.js',distDir+'/js/main.js']),
 		uglify(),
 		gulp.dest(distDir+'/js/')
 	],
