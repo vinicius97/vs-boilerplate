@@ -53,6 +53,7 @@ gulp.task('images', function(cb) {
 		progressive: true,
 		interlaced: true
 	})).pipe(gulp.dest(distDir+'/img/')).on('end', cb).on('error', cb);
+	gulp.watch([sourceDir+'/img/**/*.png',sourceDir+'/img/**/*.svg'],'images')
 });
 
 
